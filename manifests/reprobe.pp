@@ -12,4 +12,10 @@ class corosync::reprobe {
   Cs_order <| |> {
     notify => Exec['crm resource reprobe'],
   }
+  Cs_group <| |> {
+    notify => Exec['crm resource reprobe'],
+  }
+  Cs_commit <| |> {
+    notify => Exec['crm resource reprobe'],
+  }
 }
